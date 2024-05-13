@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'assignment-two';
+  username: string = '';
+
+  isEmptyUsername(): boolean {
+    return this.username.trim().length < 1;
+  }
+
+  onResetUsername() {
+    this.username = '';
+  }
 }
